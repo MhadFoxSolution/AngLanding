@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Importa RouterModule
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -8,14 +9,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     MatButtonModule,
-    MatToolbarModule,
+    MatToolbarModule
   ],
-  template: `
-    <mat-toolbar color="primary">
-      <span>Mi Aplicación</span>
-    </mat-toolbar>
-    <button mat-button color="primary">Haz clic aquí</button>
-  `,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'MHAD FOX Solution';
+}
