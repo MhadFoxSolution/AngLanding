@@ -1,22 +1,65 @@
-.toolbar-content {
-    width: 100%;
-    position: relative; /* Para que los elementos posicionados absolutamente se ubiquen relativo a este contenedor */
-    display: flex;
-    align-items: center;
-  }
-  
-  /* El título se deja en el flujo normal, pero se le agrega margen a la izquierda */
-  .toolbar-content span {
-    margin-left: 1rem;
-  }
-  
-  /* Los botones se centran utilizando posición absoluta */
-  .buttons-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;       /* Para alinear los botones en línea */
-    gap: 1rem;           /* Espaciado entre botones */
-  }
+mat-toolbar {
+  position: relative;
+  padding: 0 !important;
+}
 
-  
+.toolbar-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.toolbar-content span {
+  font-size: 1.25rem;
+  white-space: nowrap;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-button {
+  display: none;
+  margin-left: auto;
+}
+.mobile-menu{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Oculta los botones de la versión Desktop */
+  .buttons-container {
+    display: none !important;
+  }
+  .toolbar-content span {
+    font-size: 1rem;
+  }
+  .menu-button {
+    display: block;
+  }
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    flex-direction: column;
+    width: 100%;
+  }
+  .mobile-menu.open {
+    display: flex;
+  }
+  .mobile-menu button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}

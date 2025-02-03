@@ -4,16 +4,18 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule,         // Necesario para <router-outlet>
+    RouterModule,         
     MatButtonModule,
     MatToolbarModule,
-    NavbarComponent       // Asegúrate que está importado aquí
+    NavbarComponent,
+    FooterComponent   
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

@@ -1,25 +1,47 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule],
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule
+  ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  // Funciones para los clics (puedes personalizar)
-  handleButton1() {
-    console.log('Botón 1 clickeado');
+  isMenuOpen = false;
+
+  constructor(private router: Router) {}
+
+  // Alterna la visualización del menú móvil
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
-  handleButton2() {
-    console.log('Botón 2 clickeado');
+  // Navega a la ruta indicada y cierra el menú móvil
+  navigateTo(destination: string) {
+    console.log(`Navegando a: ${destination}`);
+    this.router.navigate([destination]);
+    this.isMenuOpen = false;
   }
 
-  handleButton3() {
-    console.log('Botón 3 clickeado');
+  // Métodos para la versión Desktop
+  hdlBtnhome() {
+    this.navigateTo('inicio');
+  }
+
+  hdlBtnAbout() {
+    this.navigateTo('quienes-somos');
+  }
+
+  hdlBtnContact() {
+    this.navigateTo('contacto');
   }
 }
