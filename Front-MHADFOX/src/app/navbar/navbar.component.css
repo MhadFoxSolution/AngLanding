@@ -1,0 +1,22 @@
+.toolbar-content {
+    width: 100%;
+    position: relative; /* Para que los elementos posicionados absolutamente se ubiquen relativo a este contenedor */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* El título se deja en el flujo normal, pero se le agrega margen a la izquierda */
+  .toolbar-content span {
+    margin-left: 1rem;
+  }
+  
+  /* Los botones se centran utilizando posición absoluta */
+  .buttons-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;       /* Para alinear los botones en línea */
+    gap: 1rem;           /* Espaciado entre botones */
+  }
+
+  
