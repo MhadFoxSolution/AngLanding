@@ -10,6 +10,7 @@ mat-toolbar {
   align-items: center;
   padding: 0 1rem;
   position: relative;
+  /*background-color: #7AB8BF;*/
 }
 
 .toolbar-content span {
@@ -28,6 +29,17 @@ mat-toolbar {
 }
 .mobile-menu{
   display: none;
+}
+.logo-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 40px; /* Ajusta según el tamaño deseado */
 }
 
 @media (max-width: 768px) {

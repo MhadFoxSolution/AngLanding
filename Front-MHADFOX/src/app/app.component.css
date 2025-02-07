@@ -1,4 +1,5 @@
 router-outlet + * {
     display: block;
     margin-top: 80px;
+    background-color: #D8D9D7;
   }
