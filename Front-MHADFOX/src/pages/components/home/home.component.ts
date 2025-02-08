@@ -11,7 +11,6 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  // Configuración del carrusel
   carouselOptions: OwlOptions = {
     loop: true,
     margin: 10,
@@ -26,16 +25,13 @@ export class HomeComponent {
     }
   };
 
-  // Imágenes para el carrusel
   carouselImages: string[] = [
-    'images/LogoMHADFOX.png',
-    'images/LogoMHADFOX.png',
-    'images/LogoMHADFOX.png',
-    'images/LogoMHADFOX.png',
+    'images/Carrusel-1.jfif',
+    'images/Carrusel-2.gif',
+    'images/Carrusel-3.jfif',
     'images/LogoMHADFOX.png'
   ];
 
-  // Datos para las tarjetas
   cards = [
     { image: 'images/LogoMHADFOX.png', description: 'Jonathan Abraham - [Frase]' },
     { image: 'images/LogoMHADFOX.png', description: 'Aldo Gonzalez - [Frase]' },
