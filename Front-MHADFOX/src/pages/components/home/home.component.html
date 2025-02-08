@@ -1,1 +1,26 @@
-<p>home works!</p>
+<section class="hero">
+    <h1>MHAD FOX Solution</h1>
+    <p></p>
+  </section>
+  
+  <!-- Carrusel de Tecnologías -->
+  <section class="carousel-container">
+    <owl-carousel-o [options]="carouselOptions">
+      <ng-container *ngFor="let img of carouselImages">
+        <ng-template carouselSlide>
+          <img [src]="img" class="carousel-img" alt="Tecnología">
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </section>
+  
+  <!-- owl-carrousel-o is not a kwon  -->
+  <section class="cards-container">
+    <mat-card *ngFor="let card of cards">
+      <img mat-card-image [src]="card.image" alt="Imagen">
+      <mat-card-content>
+        <p>{{ card.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </section>
+  

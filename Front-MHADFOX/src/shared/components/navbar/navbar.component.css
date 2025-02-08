@@ -36,6 +36,7 @@ mat-toolbar {
   padding: 0;
   margin-right: 10px;
   cursor: pointer;
+  align-items: center;
 }
 
 .logo-img {
