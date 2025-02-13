@@ -1,1 +1,69 @@
-<p>contacto works!</p>
+<div class="container">
+    <h2 class="title"> <span class="highlight">Contactanos</span></h2>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <mat-grid-list cols="2" rowHeight="500px" >
+      <!-- Sección Izquierda: Detalles de Contacto -->
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <div class="contact-details" >
+          <h3>Datos de contacto</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          <div class="contact-item">
+            <mat-icon class="icon">smartphone</mat-icon>
+            <div>
+              <strong>TELEFONO:</strong><br>
+              5555555555
+            </div>
+          </div>
+  
+          <div class="contact-item">
+            <mat-icon class="icon">email</mat-icon>
+            <div>
+              <strong>EMAIL:</strong><br>
+              mhad.fox.solutiongmail.com
+            </div>
+          </div>
+  
+          <div class="contact-item">
+            <mat-icon class="icon">location_on</mat-icon>
+            <div>
+              <strong>DIRECCION:</strong><br>
+              6743 last street, Abcd, Xyz
+            </div>
+          </div>
+        </div>
+      </mat-grid-tile>
+      <!-- Sección Derecha: Formulario -->
+      <mat-grid-tile [colspan]="1" [rowspan]="1" >
+        <form class="contact-form"[formGroup]="datos">
+          <mat-grid-list cols="2" >
+            <mat-grid-tile>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Nombre</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </mat-grid-tile>
+  
+            <mat-grid-tile>
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" formControlName="email">
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+  
+          <mat-form-field appearance="outline" class="full-width" >
+            <mat-label>Asunto</mat-label>
+            <input matInput formControlName="asunto">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Mensaje</mat-label>
+            <textarea matInput rows="4" formControlName="mensaje"></textarea>
+          </mat-form-field>
+          <button mat-flat-button color="primary" class="send-button" (click)="envioCorreo()">Enviar!</button>
+        </form>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

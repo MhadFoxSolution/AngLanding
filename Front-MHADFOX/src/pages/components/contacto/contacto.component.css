@@ -1,0 +1,58 @@
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 2%;
+  }
+  
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #f25c05;
+  }
+  
+  .description {
+    color: gray;
+    margin-bottom: 30px;
+  }
+  
+  .contact-details {
+    text-align: left;
+    padding: 5px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #004d40;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    width:340px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .send-button {
+    width: 100%;
+    background-color:  #f25c05;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+  }
