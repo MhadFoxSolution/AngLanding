@@ -1,7 +1,7 @@
 /* Estilos para el encabezado */
 .hero {
     text-align: center;
-    background-color: #1976d2;
+    background-color: rgb(26, 117, 209);
     color: white;
     padding: 2rem;
   }
@@ -11,6 +11,12 @@
     margin: 0;
   }
   
+  h2{
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+  }
+
   .hero p {
     font-size: 1.2rem;
   }
@@ -20,12 +26,16 @@
     margin: 2rem auto;
     max-width: 80%;
     text-align: center;
+    
+
   }
   
   .carousel-img {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    object-fit: cover;
+    height: 350px;
   }
   
   /* Estilos para las tarjetas */
@@ -44,22 +54,119 @@
     align-items: center;
     padding: 1rem;
     text-align: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px #00000033;
     border-radius: 10px;
   }
   
-  mat-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
+  /* Ajuste para mostrar el texto al hacer hover en toda la tarjeta */
+mat-card {
+  position: relative; /* Necesario para posicionar el texto encima */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden; /* Evita que el texto se salga del borde redondeado */
+}
+
+mat-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  /* object-fit: contain; */
+  border-radius: 8px;
+  display: flex;
+}
+
+/* Contenedor del texto oculto */
+.card-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cubre toda la tarjeta */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a76d196; /* Fondo oscuro semitransparente */
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Muestra el texto al pasar el cursor sobre toda la tarjeta */
+mat-card:hover .card-text {
+  opacity: 1;
+}
+
+/* Para la descripción de home */
+.services-container {
+  display: flex;
+  max-width: 1000px;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.service{
+  max-width: 300px;
+}
+.service img{
+  width: 220px;
+  height: 220px;
+  border-radius: 10%;
+  border: 3px solid #555;
+  padding: 10px;
+}
+
+
+
+/* 
+max-width: 1000px; /* Define el ancho máximo */
+/* margin: 0 auto; /* Centra la sección horizontalmente */
+/* padding: 20px; Agrega espacio interno */
+/* text-align: center; Centra el texto */
+
+/* Para el apartado de quienes somos */
+.about-container{
+  max-width: 1100px; /* Define el ancho máximo */
+  margin: 0 auto; /* Centra la sección horizontalmente */
+  padding: 20px; 
+  text-align: center;
+  display: flex;
+}
+
+.about-description{
+  width: 60%;
   
-  mat-card-content p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-  }
+}
+
+.about-image{
   
+  
+}
+.about-image img {
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* Para los interlineados de cada sección */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  margin: 20px 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+
+
   /* Diseño Responsivo */
   @media (max-width: 768px) {
     .hero h1 {

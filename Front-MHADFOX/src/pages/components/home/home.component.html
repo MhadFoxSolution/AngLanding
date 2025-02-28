@@ -6,7 +6,8 @@
   <!-- Carrusel de Tecnologías -->
   <section class="carousel-container">
     <owl-carousel-o [options]="carouselOptions">
-      <ng-container *ngFor="let img of carouselImages">
+      <!-- Se le agregó "trackBy: trackByFn" para que cada imagen tuviera un identificador en el arreglo -->
+      <ng-container *ngFor="let img of carouselImages; trackBy: trackByFn">
         <ng-template carouselSlide>
           <img [src]="img" class="carousel-img" alt="Tecnología">
         </ng-template>
@@ -14,12 +15,41 @@
     </owl-carousel-o>
   </section>
   
+  <h2 style="text-align: center;">Servicios</h2>
+<section class="services-container">
+  <div service-img *ngFor ="let service of services" class="service">
+    <img [src] ="service.image" alt="service.titulo">
+    <h3>{{ service.titulo }}</h3>
+    <p>{{ service.descripcion }}</p>
+  </div>
+</section>
+
+<hr>
+
+<h2>¿Quienes somos?</h2>
+<section class="about-container">
+  <div class="about-description">
+    <p>Somos una empresa especializada en el desarrollo de software a la medida, 
+      diseñada para optimizar y facilitar las actividades diarias de nuestros clientes.
+       Nuestro enfoque innovador y nuestras soluciones personalizadas permiten mejorar la eficiencia y productividad, brindando herramientas adaptadas a las necesidades específicas de cada usuario.
+      </p>
+  </div>
+  <div class="about-image">
+    <img src="images/about.png" alt="">
+  </div>
+  
+</section>
+<hr>
+
+<br>
   <!-- owl-carrousel-o is not a kwon  -->
+  <h2 style="text-align: center;">Nuestro equipo</h2>
   <section class="cards-container">
-    <mat-card *ngFor="let card of cards">
+    <mat-card *ngFor="let card of cards" class="card-container">
       <img mat-card-image [src]="card.image" alt="Imagen">
+      <div class="card-text">{{ card.descripcion }}</div>
       <mat-card-content>
-        <p>{{ card.description }}</p>
+        <p>{{ card.nombre }}</p>
       </mat-card-content>
     </mat-card>
   </section>
