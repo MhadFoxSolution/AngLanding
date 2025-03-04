@@ -2,15 +2,31 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, MatCardModule, CarouselModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    trigger('rotate', [
+      state('stop', style({ transform: 'rotate(0deg)' })),
+      state('start', style({ transform: 'rotate(0deg)' })),
+      transition('stop => start', [
+        animate('5s linear', keyframes([
+          style({ transform: 'rotate(0deg)', offset: 0 }),
+          style({ transform: 'rotate(360deg)', offset: 1 })
+        ]))
+      ]),
+      transition('start => stop', animate('0s'))
+    ])
+  ]
 })
 export class HomeComponent {
+  state = 'stop';
+
   carouselOptions: OwlOptions = {
     loop: true,
     margin: 10,
@@ -33,16 +49,16 @@ export class HomeComponent {
   ];
 
   cards = [
-    { image: 'images/tucan.jpeg', nombre: 'Jonathan Abraham ', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/aldo.jpg', nombre: 'Aldo Gonzalez', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/felipe.jpg', nombre: 'Felipe Segura', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/LogoMHADFOX.png', nombre: 'Mario Cervantes', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/alejandro.jpg', nombre: 'Alejandro Ramirez', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/hidai.jpg', nombre: 'Hidai Hernandez', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/ustedcan.jpeg', nombre: 'Xavier Torres', descripcion: 'HUUUUUHG!!!'   },
-    { image: 'images/david.jpg', nombre: 'David Galguera', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/oscar.jpg', nombre: 'Oscar Martinez', descripcion: '[FRASE MOTIVADORA]'   },
-    { image: 'images/fernando.jpg', nombre: 'Fernando Medina', descripcion: '[FRASE MOTIVADORA]'   }
+    { image: 'images/abraham.jpeg', nombre: 'Jonathan Abraham ', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/aldo.jpg', nombre: 'Aldo Gonzalez', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/felipe.jpg', nombre: 'Felipe Segura', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/LogoMHADFOX.png', nombre: 'Mario Cervantes', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/alejandro.jpg', nombre: 'Alejandro Ramirez', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/hidai.jpg', nombre: 'Hidai Hernandez', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/ustedcan.jpeg', nombre: 'Xavier Torres', descripcion: 'HUUUUUHG!!!' },
+    { image: 'images/david.jpg', nombre: 'David Galguera', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/oscar.jpg', nombre: 'Oscar Martinez', descripcion: '[FRASE MOTIVADORA]' },
+    { image: 'images/fernando.jpg', nombre: 'Fernando Medina', descripcion: '[FRASE MOTIVADORA]' }
   ];
 
   services =[
@@ -53,5 +69,14 @@ export class HomeComponent {
   //Se le agregó este metodo para que nos regresara el índice como clave única
   trackByFn(index: number, item: string): any {
     return index; 
+  }
+
+  // Métodos para controlar la animación
+  startRotation() {
+    this.state = 'start';
+  }
+
+  stopRotation() {
+    this.state = 'stop';
   }
 }
