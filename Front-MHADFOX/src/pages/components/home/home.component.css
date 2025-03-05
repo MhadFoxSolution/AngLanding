@@ -1,7 +1,9 @@
 /* Estilos para el encabezado */
 .hero {
     text-align: center;
-    background-color: rgb(26, 117, 209);
+    /* background-color: #1a75d1; */
+    background: rgb(254,94,6);
+    background: linear-gradient(90deg, rgba(254,94,6,1) 0%, rgba(0,212,255,1) 100%);
     color: white;
     padding: 2rem;
   }
@@ -15,6 +17,9 @@
     font-size: 2.5rem;
     margin: 0;
     text-align: center;
+  }
+  p{
+    font-size: 1.2rem;
   }
 
   .hero p {
@@ -111,6 +116,7 @@ mat-card:hover .card-text {
   padding: 2rem;
   text-align: center;
   margin: 0 auto;
+  
 }
 
 .service{
@@ -120,29 +126,27 @@ mat-card:hover .card-text {
   width: 220px;
   height: 220px;
   border-radius: 10%;
-  border: 3px solid #555;
+  border: 3px solid #71a5b7;
   padding: 10px;
 }
 
 
-
-/* 
-max-width: 1000px; /* Define el ancho máximo */
-/* margin: 0 auto; /* Centra la sección horizontalmente */
-/* padding: 20px; Agrega espacio interno */
-/* text-align: center; Centra el texto */
-
 /* Para el apartado de quienes somos */
 .about-container{
-  max-width: 1100px; /* Define el ancho máximo */
+  width: 100vw;; /* Define el ancho máximo */
   margin: 0 auto; /* Centra la sección horizontalmente */
-  padding: 20px; 
+  /* padding: 20px;  */
   text-align: center;
   display: flex;
+  /* background-color: #1a75d1; */
+  background: rgb(254,94,6);
+background: linear-gradient(90deg, rgba(254,94,6,1) 0%, rgba(0,212,255,1) 100%);
 }
 
 .about-description{
   width: 60%;
+  text-align: justify;
+  padding: 40px;
   
 }
 

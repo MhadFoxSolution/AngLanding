@@ -26,19 +26,21 @@
 
 <hr>
 
-<h2>¿Quienes somos?</h2>
+
 <section class="about-container">
   <div class="about-description">
-    <p>Somos una empresa especializada en el desarrollo de software a la medida, 
+    <h2 style="color: aliceblue;">¿Quienes somos?</h2>
+    <p style="color: aliceblue;">Somos una empresa especializada en el desarrollo de software a la medida,
       diseñada para optimizar y facilitar las actividades diarias de nuestros clientes.
-       Nuestro enfoque innovador y nuestras soluciones personalizadas permiten mejorar la eficiencia y productividad, brindando herramientas adaptadas a las necesidades específicas de cada usuario.
-      </p>
+      Nuestro enfoque innovador y nuestras soluciones personalizadas permiten mejorar la eficiencia y productividad, brindando herramientas adaptadas a las necesidades específicas de cada usuario.
+    </p>
   </div>
   <div class="about-image">
-    <img src="images/about.png" alt="">
+    <img [@rotate]="state" src="images/about.png" alt="Imagen giratoria" (mouseover)="startRotation()" (mouseout)="stopRotation()">
   </div>
-  
 </section>
+
+
 <hr>
 
 <br>
