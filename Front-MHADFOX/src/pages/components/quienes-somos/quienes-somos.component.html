@@ -1,1 +1,48 @@
-<p>quienes-somos works!</p>
+<section class="hero">
+    <h1>¿Quiénes somos?</h1>
+    <p>
+        Somos un grupo de entusiastas de la tecnología comprometidos con transformar cada idea en una solución que marque la diferencia. Nuestra pasión nos impulsa a explorar nuevos horizontes y enfrentar los desafíos con creatividad e innovación. Creemos en el poder de las herramientas tecnológicas para empoderar a las personas y empresas, entregando soluciones que no solo resuelven problemas, sino que también abren puertas a nuevas oportunidades.
+    </p>
+  </section>
+  
+  <section class="about-container">
+    <h2>Nuestra historia</h2>
+    <p>
+        Nuestro equipo está formado por nueve desarrolladores independientes, cada uno con habilidades especializadas que aportan experiencia y creatividad a cada proyecto. Trabajamos de manera colaborativa para ofrecer soluciones personalizadas que superen las expectativas, combinando innovación y compromiso con la calidad en cada etapa del desarrollo. Nuestro objetivo es transformar desafíos en oportunidades, brindando herramientas tecnológicas que generen valor real para nuestros clientes.
+    </p>
+  </section>
+  
+  <section class="values-container">
+    <h2>Nuestros valores</h2>
+    <div class="values-grid">
+      <div class="value">
+        <mat-icon>lightbulb</mat-icon>
+        <h3>Innovación</h3>
+        <p>Siempre buscamos nuevas ideas para resolver desafíos únicos.</p>
+      </div>
+      <div class="value">
+        <mat-icon>group</mat-icon>
+        <h3>Colaboración</h3>
+        <p>Creemos en el poder del trabajo en equipo para lograr el éxito.</p>
+      </div>
+      <div class="value">
+        <mat-icon>trending_up</mat-icon>
+        <h3>Compromiso</h3>
+        <p>Nos dedicamos a entregar resultados que superen las expectativas.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="team-container">
+    <h2>Conoce a nuestro equipo</h2>
+    <div class="team-grid">
+      <div *ngFor="let member of team" class="team-member">
+        <img [src]="member.image" alt="{{member.name}}">
+        <div class="overlay">
+          <p>{{member.name}}</p>
+          <p>{{member.specialty}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  

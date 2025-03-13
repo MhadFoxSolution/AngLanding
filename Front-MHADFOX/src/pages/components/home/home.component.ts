@@ -55,7 +55,7 @@ export class HomeComponent {
     { image: 'images/LogoMHADFOX.png', nombre: 'Mario Cervantes', descripcion: '[FRASE MOTIVADORA]' },
     { image: 'images/alejandro.jpg', nombre: 'Alejandro Ramirez', descripcion: '[FRASE MOTIVADORA]' },
     { image: 'images/hidai.jpg', nombre: 'Hidai Hernandez', descripcion: '[FRASE MOTIVADORA]' },
-    { image: 'images/ustedcan.jpeg', nombre: 'Xavier Torres', descripcion: 'HUUUUUHG!!!' },
+    ///{ image: 'images/ustedcan.jpeg', nombre: 'Xavier Torres', descripcion: 'HUUUUUHG!!!' },
     { image: 'images/david.jpg', nombre: 'David Galguera', descripcion: '[FRASE MOTIVADORA]' },
     { image: 'images/oscar.jpg', nombre: 'Oscar Martinez', descripcion: '[FRASE MOTIVADORA]' },
     { image: 'images/fernando.jpg', nombre: 'Fernando Medina', descripcion: '[FRASE MOTIVADORA]' }
