@@ -1,58 +1,20 @@
 <section class="hero">
-    <h1>MHAD FOX Solution</h1>
-    <p></p>
-  </section>
-  
-  <!-- Carrusel de Tecnologías -->
-  <section class="carousel-container">
-    <owl-carousel-o [options]="carouselOptions">
-      <!-- Se le agregó "trackBy: trackByFn" para que cada imagen tuviera un identificador en el arreglo -->
-      <ng-container *ngFor="let img of carouselImages; trackBy: trackByFn">
-        <ng-template carouselSlide>
-          <img [src]="img" class="carousel-img" alt="Tecnología">
-        </ng-template>
-      </ng-container>
-    </owl-carousel-o>
-  </section>
-  
-  <h2 style="text-align: center;">Servicios</h2>
-<section class="services-container">
-  <div service-img *ngFor ="let service of services" class="service">
-    <img [src] ="service.image" alt="service.titulo">
-    <h3>{{ service.titulo }}</h3>
-    <p>{{ service.descripcion }}</p>
+  <img src="images/Bkg15.jpg" alt="Fondo de Bienvenida" class="hero-image">
+  <div class="hero-text">
+    <h1>Bienvenidos a MHAD FOX Solution</h1>
+    <p>Soluciones tecnológicas a la medida para optimizar tus actividades diarias.</p>
   </div>
 </section>
-
-<hr>
-
-
-<section class="about-container">
-  <div class="about-description">
-    <h2 style="color: aliceblue;">¿Quienes somos?</h2>
-    <p style="color: aliceblue;">Somos una empresa especializada en el desarrollo de software a la medida,
-      diseñada para optimizar y facilitar las actividades diarias de nuestros clientes.
-      Nuestro enfoque innovador y nuestras soluciones personalizadas permiten mejorar la eficiencia y productividad, brindando herramientas adaptadas a las necesidades específicas de cada usuario.
-    </p>
-  </div>
-  <div class="about-image">
-    <img [@rotate]="state" src="images/about.png" alt="Imagen giratoria" (mouseover)="startRotation()" (mouseout)="stopRotation()">
-  </div>
-</section>
-
-
-<hr>
-
-<br>
-  <!-- owl-carrousel-o is not a kwon  -->
-  <h2 style="text-align: center;">Nuestro equipo</h2>
-  <section class="cards-container">
-    <mat-card *ngFor="let card of cards" class="card-container">
-      <img mat-card-image [src]="card.image" alt="Imagen">
-      <div class="card-text">{{ card.descripcion }}</div>
+<section class="services-container" style="background-color: #E3E3E3;">
+  <h2>Servicios</h2>
+  <div class="service-cards">
+    <mat-card *ngFor="let service of services" class="service-card">
+      <img mat-card-image [src]="service.image" alt="{{ service.titulo }}">
+      <mat-card-title><h3>{{ service.titulo }}</h3></mat-card-title>
       <mat-card-content>
-        <p>{{ card.nombre }}</p>
+        <p><strong>{{ service.intro }}</strong></p>
+        <p>{{ service.body }}</p>
       </mat-card-content>
     </mat-card>
-  </section>
-  
+  </div>
+</section>

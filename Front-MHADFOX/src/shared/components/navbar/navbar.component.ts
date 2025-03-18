@@ -18,9 +18,4 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
-  isMenuOpen = false;
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-}
+export class NavbarComponent {}

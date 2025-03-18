@@ -1,6 +1,7 @@
+/* General toolbar styling */
 mat-toolbar {
-  position: relative;
-  padding: 0 !important;
+  background-color: #FFFFFF; /* Fondo principal */
+  color: #D8D9D7; /* Texto claro */
 }
 
 .toolbar-content {
@@ -8,82 +9,52 @@ mat-toolbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
-  position: relative;
-  /*background-color: #7AB8BF;*/
+  padding: 0 2rem;
 }
 
-.toolbar-content span {
-  font-size: 1.25rem;
-  white-space: nowrap;
-}
-
-.buttons-container {
-  display: flex;
-  gap: 1rem;
-}
-
-.menu-button {
-  display: none;
-  margin-left: auto;
-}
-.mobile-menu{
-  display: none;
-}
 .logo-button {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  border: none;
   background: none;
-  border: none;
-  padding: 0;
-  margin-right: 10px;
+  color: #012E40;
   cursor: pointer;
-  text-transform: none;
-  transition: all 0.2s ease;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .logo-button:hover {
-  border: none;
-  border-radius: 10px;
-  background-color: #D8D9D7;
+  transform: scale(1.05);
 }
+
 .logo-img {
-  height: 40px;
-  width: auto;
+  height: 50px;
 }
 
+.custom-button {
+  background-color: #F24405;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+.custom-button:hover {
+  background-color: #F24405; /* Fondo en hover */
+  transform: scale(1.05);
+}
 
-@media (max-width: 768px) {
-  /* Oculta los botones de la versión Desktop */
-  .buttons-container {
-    display: none !important;
-  }
-  .toolbar-content span {
-    font-size: 1rem;
-  }
-  .menu-button {
-    display: block;
-  }
-  .mobile-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    flex-direction: column;
-    width: 100%;
-  }
-  .mobile-menu.open {
-    display: flex;
-  }
-  .mobile-menu button {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 0;
-    text-align: left;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
+.button-secundary{
+  color: #012E40;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.button-secundary:hover {
+  transform: scale(1.05);
 }

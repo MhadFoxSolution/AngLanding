@@ -5,20 +5,10 @@
       <span>MHAD FOX Solution</span>
     </button>
 
-    <div class="buttons-container">
-      <button mat-raised-button routerLink="/home">Inicio</button>
-      <button mat-raised-button routerLink="/quienes-somos">¿Quiénes somos?</button>
-      <button mat-raised-button routerLink="/contacto">Contacto</button>
+    <div>
+      <button mat-button routerLink="/home" class="button-secundary">Inicio</button>
+      <button mat-button routerLink="/quienes-somos" class="button-secundary">¿Quiénes somos?</button>
+      <button mat-button routerLink="/contacto" class="custom-button">Contactanos</button>
     </div>
-
-    <button mat-icon-button class="menu-button" (click)="toggleMenu()" aria-label="Menú móvil">
-      <mat-icon>menu</mat-icon>
-    </button>
   </div>
 </mat-toolbar>
-
-<div class="mobile-menu" [class.open]="isMenuOpen">
-  <button mat-button routerLink="/home" (click)="toggleMenu()">Inicio</button>
-  <button mat-button routerLink="/quienes-somos" (click)="toggleMenu()">¿Quiénes somos?</button>
-  <button mat-button routerLink="/contacto" (click)="toggleMenu()">Contacto</button>
-</div>
