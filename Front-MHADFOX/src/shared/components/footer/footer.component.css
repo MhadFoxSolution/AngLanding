@@ -1,23 +1,55 @@
+/* General Footer Styles */
+.footer {
+  background-color: #FFFF; /* Fondo uniforme */
+  padding: 1.5rem 1rem;
+  text-align: center; /* Asegura el texto centrado */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Elementos apilados */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+}
+
 .footer-links {
-    margin-top: 0.5rem;
-  }
-  
-  .footer-links a {
-    color: #012E40;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    font-size: 0.875rem;
-  }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
+  align-self: flex-start; /* Links alineados a la izquierda */
+  margin-bottom: 1rem;
+  width: 100%; /* Asegura que se respeten las proporciones del contenedor */
+  text-align: left; /* Alinea los links a la izquierda */
+}
+
+.footer-links a {
+  color: #012E40;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.875rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Text */
+.footer-text {
+  color: #012E40;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center; /* Texto centrado */
+  margin-top: 1rem; /* Espaciado entre los elementos */
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .footer-text {
-      font-size: 0.875rem; /* Reduce el tamaño del texto en móviles */
-    }
-  
-    .footer {
-      padding: 0.75rem 0; /* Reduce el padding en móviles */
-    }
+  .footer-text {
+    font-size: 0.75rem; /* Tamaño reducido para móviles */
   }
+
+  .footer {
+    padding: 1rem 0.5rem; /* Ajuste de padding en pantallas pequeñas */
+  }
+
+  .footer-links {
+    text-align: left; /* Mantén los links a la izquierda */
+  }
+}
