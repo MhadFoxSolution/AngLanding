@@ -1,24 +1,76 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card'; // Importación añadida
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 @Component({
   selector: 'app-quienes-somos',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [
+    CommonModule,
+    MatIconModule,
+    MatCardModule, // Módulo añadido aquí
+    CarouselModule
+  ],
   templateUrl: './quienes-somos.component.html',
-  styleUrls: ['./quienes-somos.component.css']
+  styleUrls: ['./quienes-somos.component.css'],
+  animations: [
+    trigger('rotate', [
+      state('stop', style({ transform: 'rotate(0deg)' })),
+      state('start', style({ transform: 'rotate(0deg)' })),
+      transition('stop => start', [
+        animate('5s linear', keyframes([
+          style({ transform: 'rotate(0deg)', offset: 0 }),
+          style({ transform: 'rotate(360deg)', offset: 1 })
+        ]))
+      ]),
+      transition('start => stop', animate('0s'))
+    ])
+  ]
 })
 export class QuienesSomosComponent {
-  team = [
-    { image: 'images/david.jpg', name: 'David Galguera', specialty: 'Desarrollo Web' },
-    { image: 'images/felipe.jpg', name: 'Felipe Segura', specialty: 'Desarrollo Web' },
-    { image: 'images/aldo.jpg', name: 'Aldo Gonzalez', specialty: 'Bases de datos' },
-    { image: 'images/fernando.jpg', name: 'Fernando Medina', specialty: 'Back-End' },
-    { image: 'images/alejandro.jpg', name: 'Alejandro Ramirez', specialty: 'Bases de datos' },
-    { image: 'images/abraham.jpeg', name: 'Abraham Ornelas', specialty: 'Bases de datos.' },
-    { image: 'images/hidai.jpg', name: 'Hidai Hernandez', specialty: 'Desarrollo Web' },
-    { image: 'images/oscar.jpg', name: 'Oscar Martinez', specialty: 'Desarrollo Web' },
-    { image: 'images/tucan.jpeg', name: 'Mario Cervantes', specialty: 'Analisis de datos' },
+  state = 'stop';
+
+  carouselOptions: OwlOptions = {
+    loop: true,
+    margin: 10,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 3 }
+    }
+  };
+
+  carouselImages: string[] = [];
+
+  cards = [
+    { image: 'images/abraham.jpeg', nombre: 'Jonathan Abraham ', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/aldo.jpg', nombre: 'Aldo Gonzalez', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/felipe.jpg', nombre: 'Felipe Segura', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/LogoMHADFOX.png', nombre: 'Mario Cervantes', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/alejandro.jpg', nombre: 'Alejandro Ramirez', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/hidai.jpg', nombre: 'Hidai Hernandez', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/david.jpg', nombre: 'David Galguera', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/oscar.jpg', nombre: 'Oscar Martinez', descripcion: '[ESPECIALIDAD DE TI]' },
+    { image: 'images/fernando.jpg', nombre: 'Fernando Medina', descripcion: '[ESPECIALIDAD DE TI]' }
   ];
+
+  trackByFn(index: number, item: { image: string; nombre: string; descripcion: string }): any {
+    return index; // Utiliza el índice como clave única
+  }
+  
+
+  startRotation() {
+    this.state = 'start';
+  }
+
+  stopRotation() {
+    this.state = 'stop';
+  }
 }

@@ -1,58 +1,87 @@
+.hero {
+  padding: 4rem 2rem;
+  background-color: #E3E3E3; /* Fondo uniforme */
+  position: relative;
+  overflow: hidden; /* Evita que el pseudo-elemento desplace el contenido */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/LogoMHADFOX.png'); /* Ruta de la marca de agua */
+  background-size: 50%; /* Tamaño del logo, ajustable */
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1; /* Marca de agua sutil */
+  z-index: -0.9; /* Asegura que esté completamente detrás del contenido */
+}
 
 .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-    border-radius: 2%;
-  }
-  
-  .title {
-    font-size: 2em;
-    font-weight: bold;
-  }
-  
-  .highlight {
-    color: #f25c05;
-  }
-  
-  .description {
-    color: gray;
-    margin-bottom: 30px;
-  }
-  
-  .contact-details {
-    text-align: left;
-    padding: 5px;
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-  }
-  
-  .icon {
-    font-size: 20px;
-    margin-right: 10px;
-    color: #004d40;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap:0px;
-    width:340px;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  .send-button {
-    width: 100%;
-    background-color:  #f25c05;
-    color: white;
-    font-size: 16px;
-    padding: 10px;
-  }
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #F25C05;
+  font-weight: bold;
+}
+
+.description {
+  color: #012E40;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.contact-details {
+  text-align: left;
+  padding: 5px;
+  color: #012E40;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  color: #012E40;
+}
+
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #012E40;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 340px;
+}
+
+.send-button {
+  width: 100%;
+  background-color: #f25c05;
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.send-button:hover {
+  background-color: #F24405; /* Fondo en hover */
+  transform: scale(1.05);
+}

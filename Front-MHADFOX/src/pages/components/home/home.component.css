@@ -39,7 +39,7 @@
 /* Segunda Sección: Servicios */
 .services-container {
   padding: 4rem 2rem;
-  background-color: #E3E3E3; /* Fondo uniforme */
+  background-color: #D8D9D7; /* Fondo uniforme */
 }
 
 .services-container h2 {
@@ -69,8 +69,8 @@
 }
 
 .service-card img {
-  width: 300px;
-  height: 300px;
+  width: 65%;
+  height: 35%;
   object-fit: cover; /* Tamaño uniforme para las imágenes */
   border-radius: 5%; /* Bordes redondeados */
   display: block;

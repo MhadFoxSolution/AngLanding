@@ -50,7 +50,7 @@ mat-toolbar {
 }
 
 .button-secundary{
-  color: #012E40;
+  color: #012E40 !important;
   font-weight: bold;
   font-size: 1.2rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
