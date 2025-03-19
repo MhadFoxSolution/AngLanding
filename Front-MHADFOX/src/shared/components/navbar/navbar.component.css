@@ -1,32 +1,35 @@
-/* General toolbar styling */
+/* General styling for the Navbar */
 mat-toolbar {
   background-color: #FFFFFF; /* Fondo principal */
-  color: #D8D9D7; /* Texto claro */
+  color: #012E40; /* Color del texto */
+  z-index: 1000; /* Asegura que el navbar esté encima */
 }
 
 .toolbar-content {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Espaciado entre logo y hamburguesa */
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 1rem; /* Ajusta el espacio lateral */
+  box-sizing: border-box; /* Asegura que el contenido no exceda el ancho */
 }
 
+/* Logo button */
 .logo-button {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   border: none;
   background: none;
-  background-image: url('/images/LogoMHADFOX.png'); /* Imagen como fondo */
-  background-size: contain; /* Ajusta la imagen al botón */
-  background-repeat: no-repeat; /* No repite la imagen */
-  background-position: left center; /* Posiciona la imagen a la izquierda */
-  padding-left: 60px; /* Espacio para que el texto no sobreponga la imagen */
+  background-image: url('/images/LogoMHADFOX.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
   color: #012E40;
-  cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Reduce tamaño en pantallas pequeñas */
   font-weight: bold;
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -34,28 +37,79 @@ mat-toolbar {
   transform: scale(1.05);
 }
 
+/* Burger menu button */
+.menu-button {
+  display: none;
+  color: #012E40;
+}
 
+/* Dropdown menu for small screens */
+.mobile-menu {
+  position: fixed; /* Se mantiene encima del contenido */
+  top: 56px; /* Posición debajo del navbar */
+  left: 0; /* Alineado con el borde izquierdo */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  background-color: #F5F5F5;
+  z-index: 2000; /* Encima del contenido */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0; /* Espaciado interno superior e inferior */
+  display: flex;
+  flex-direction: column; /* Botones en columna */
+  gap: 1rem;
+  box-sizing: border-box; /* Asegura que no se desborde */
+}
+
+/* Estilo para botones dentro del menú desplegable */
+.mobile-menu button {
+  width: 90%; /* Botones ocupan 90% del ancho del menú */
+  margin: 0 auto; /* Centra los botones */
+  text-align: center; /* Alinea texto de los botones */
+  font-size: 1rem; /* Tamaño de fuente ajustado para pantallas pequeñas */
+  padding: 0.8rem; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-menu button:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Efectos para botones */
 .custom-button {
   background-color: #F24405;
   color: #FFFFFF !important;
   text-transform: capitalize;
   font-weight: bold;
-  font-size: 1.5rem;
   text-decoration: underline;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.custom-button:hover {
-  background-color: #F24405; /* Fondo en hover */
-  transform: scale(1.05);
-}
-
-.button-secundary{
+.button-secundary {
   color: #012E40 !important;
   font-weight: bold;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.button-secundary:hover {
-  transform: scale(1.05);
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-options {
+    display: none; /* Oculta el menú estándar */
+  }
+
+  .menu-button {
+    display: flex; /* Muestra hamburguesa */
+    font-size: 1.5rem; /* Ajusta el tamaño del icono */
+  }
+
+  .toolbar-content {
+    flex-wrap: nowrap; /* Asegura que los elementos no se desborden */
+    padding: 0 0.5rem;
+  }
+
+  .logo-button {
+    font-size: 1rem; /* Ajusta el tamaño del logo */
+    padding-left: 30px;
+  }
+
+  .mobile-menu {
+    top: 48px; /* Asegura que no se solape con el navbar */
+  }
 }

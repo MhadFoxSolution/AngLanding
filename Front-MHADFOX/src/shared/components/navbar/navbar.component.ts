@@ -18,4 +18,10 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  isMenuOpen = false; // Estado del menú hamburguesa
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen; // Alterna entre abierto y cerrado
+  }
+}

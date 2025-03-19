@@ -1,13 +1,27 @@
 <mat-toolbar color="primary">
   <div class="toolbar-content">
+    <!-- Botón con logo -->
     <button routerLink="/home" class="logo-button">
       <span>MHAD FOX Solution</span>
     </button>
 
-    <div>
+    <!-- Menú para pantallas grandes/medianas -->
+    <div class="menu-options" *ngIf="!isMenuOpen">
       <button mat-button routerLink="/home" class="button-secundary">Inicio</button>
       <button mat-button routerLink="/quienes-somos" class="button-secundary">¿Quiénes somos?</button>
-      <button mat-button routerLink="/contacto" class="custom-button">Contactanos</button>
+      <button mat-button routerLink="/contacto" class="custom-button">Contáctanos</button>
     </div>
+
+    <!-- Botón hamburguesa para pantallas pequeñas -->
+    <button mat-icon-button class="menu-button" (click)="toggleMenu()">
+      <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
+    </button>
+  </div>
+
+  <!-- Menú desplegable para pantallas pequeñas -->
+  <div class="mobile-menu" *ngIf="isMenuOpen">
+    <button mat-button routerLink="/home" class="button-secundary">Inicio</button>
+    <button mat-button routerLink="/quienes-somos" class="button-secundary">¿Quiénes somos?</button>
+    <button mat-button routerLink="/contacto" class="custom-button">Contáctanos</button>
   </div>
 </mat-toolbar>
