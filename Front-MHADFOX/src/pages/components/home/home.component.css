@@ -1,40 +1,33 @@
-/* Primera Sección: Fondo con Texto */
 .hero {
-  position: relative;
   width: 100%;
-  height: 90%; /* Ajusta según tu diseño */
-  overflow: hidden;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* La imagen cubre todo el área */
+  height: 100vh; /* Ocupa toda la altura visible del navegador */
+  background-image: url('/images/Bkg15.webp'); /* Imagen de fondo */
+  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  display: flex; /* Activa el modelo de flexbox */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centra el texto */
-  color: white;
-  font-weight: bold;
-  text-align: justify; /* Justifica el texto */
-  width: 80%; /* Ajusta el ancho del texto */
+  color: white; /* Texto en blanco para buen contraste */
+  text-align: center; /* Centra el texto */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  text-align: center; /* Encabezado centrado */
+  font-size: 3rem; /* Tamaño del título */
+  margin: 0;
 }
 
 .hero-text p {
   font-size: 1.5rem;
+  margin: 10px 0 0 0;
   font-weight: bold;
-  text-align: center;
 }
+
 
 /* Segunda Sección: Servicios */
 .services-container {

@@ -67,60 +67,60 @@
 
 /* Sección 3: Nuestro equipo */
 .nuestro-equipo {
-  background-color: #E3E3E3;
+  background-color: #e3e3e3;
   text-align: center;
   padding: 4rem 2rem;
-  color: #012E40;
+  color: #012e40;
 }
 
 .carousel-container {
   padding: 2rem 0;
 }
 
+/* Estilo de las tarjetas del carrusel */
 .team-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  width: 70%; /* Reduce el tamaño de las tarjetas a un 50% */
-  margin: 0 auto; /* Centra las tarjetas */
+  position: relative; /* Asegura que los elementos internos se posicionen respecto a este contenedor */
+  overflow: hidden; /* Evita que el contenido se salga del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  width: 70%; /* Ajusta el ancho */
+  height: 300px; /* Altura fija */
+  margin: 0 auto; /* Centrado */
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease; /* Efecto de zoom suave */
 }
 
-.team-card img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.team-card:hover img {
-  transform: scale(1.1);
+.team-card:hover {
+  transform: scale(1.05); /* Efecto de zoom al hacer hover */
 }
 
 .overlay {
-  position: absolute;
+  position: absolute; /* Se posiciona relativo al contenedor padre (.team-card) */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(254, 94, 6, 1) 0%, rgba(0, 212, 255, 1) 100%);
-  color: white;
-  display: flex;
+  background: linear-gradient(90deg, rgba(254, 94, 6, 0.7) 0%, rgba(0, 212, 255, 0.7) 100%);
+  color: white; /* Texto en blanco */
+  display: flex; /* Centra el contenido */
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  justify-content: center; /* Alinea verticalmente */
+  align-items: center; /* Alinea horizontalmente */
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease; /* Transición suave para el overlay */
 }
 
 .team-card:hover .overlay {
-  opacity: 0.5;
+  opacity: 0.5; /* Se hace visible al hacer hover sobre .team-card */
 }
 
 .overlay h3 {
   margin: 0;
-  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto del título */
 }
 
 .overlay p {
-  font-size: 0.9rem; /* Ajusta el tamaño del texto */
+  font-size: 0.9rem; /* Ajusta el tamaño del texto descriptivo */
   margin-top: 0.5rem;
 }

@@ -50,15 +50,18 @@
     <owl-carousel-o [options]="carouselOptions">
       <ng-container *ngFor="let card of cards; trackBy: trackByFn">
         <ng-template carouselSlide>
-          <div class="team-card">
-            <img [src]="card.image" alt="{{ card.nombre }}" />
+          <div
+            class="team-card"
+            [style.background-image]="'url(' + card.image + ')'"
+          >
             <div class="overlay">
               <h3>{{ card.nombre }}</h3>
               <p>{{ card.descripcion }}</p>
             </div>
           </div>
-        </ng-template>
+        </ng-template>        
       </ng-container>
     </owl-carousel-o>
   </div>
 </section>
+

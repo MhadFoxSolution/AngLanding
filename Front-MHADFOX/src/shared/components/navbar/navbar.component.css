@@ -18,10 +18,14 @@ mat-toolbar {
   gap: 10px;
   border: none;
   background: none;
+  background-image: url('/images/LogoMHADFOX.png'); /* Imagen como fondo */
+  background-size: contain; /* Ajusta la imagen al botón */
+  background-repeat: no-repeat; /* No repite la imagen */
+  background-position: left center; /* Posiciona la imagen a la izquierda */
+  padding-left: 60px; /* Espacio para que el texto no sobreponga la imagen */
   color: #012E40;
   cursor: pointer;
   font-size: 1.5rem;
-  transition: color 0.2s ease;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -30,9 +34,6 @@ mat-toolbar {
   transform: scale(1.05);
 }
 
-.logo-img {
-  height: 50px;
-}
 
 .custom-button {
   background-color: #F24405;
