@@ -81,6 +81,11 @@ mat-toolbar {
   text-transform: capitalize;
   font-weight: bold;
   text-decoration: underline;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
 }
 
 .button-secundary {
