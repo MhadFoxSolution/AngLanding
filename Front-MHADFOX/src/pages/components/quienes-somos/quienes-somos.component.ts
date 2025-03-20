@@ -50,15 +50,15 @@ export class QuienesSomosComponent {
   carouselImages: string[] = [];
 
   cards = [
-    { image: 'images/abraham.webp', nombre: 'Jonathan Abraham ', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/aldo.webp', nombre: 'Aldo Gonzalez', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/felipe.webp', nombre: 'Felipe Segura', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/LogoMHADFOX.png', nombre: 'Mario Cervantes', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/alejandro.webp', nombre: 'Alejandro Ramirez', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/hidai.webp', nombre: 'Hidai Hernandez', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/david.webp', nombre: 'David Galguera', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/oscar.webp', nombre: 'Oscar Martinez', descripcion: '[ESPECIALIDAD DE TI]' },
-    { image: 'images/fernando.webp', nombre: 'Fernando Medina', descripcion: '[ESPECIALIDAD DE TI]' }
+    { image: 'images/abraham.webp', nombre: 'Jonathan Abraham ', descripcion: 'Base de datos' },
+    { image: 'images/aldo.webp', nombre: 'Aldo Gonzalez', descripcion: 'Base de datos' },
+    { image: 'images/felipe.webp', nombre: 'Felipe Segura', descripcion: 'Full Stack' },
+    { image: 'images/mario.webp', nombre: 'Mario Cervantes', descripcion: 'Analisis de datos' },
+    { image: 'images/alejandro.webp', nombre: 'Alejandro Ramirez', descripcion: 'Desarrollo Back-End' },
+    { image: 'images/hidai.webp', nombre: 'Hidai Hernandez', descripcion: 'Desarrollo Back-End' },
+    { image: 'images/david.webp', nombre: 'David Galguera', descripcion: 'Desarrollo Web' },
+    { image: 'images/oscar.webp', nombre: 'Oscar Martinez', descripcion: 'Desarrollo Web' },
+    { image: 'images/fernando.webp', nombre: 'Fernando Medina', descripcion: 'Desarrollo Back-End' }
   ];
 
   trackByFn(index: number, item: { image: string; nombre: string; descripcion: string }): any {

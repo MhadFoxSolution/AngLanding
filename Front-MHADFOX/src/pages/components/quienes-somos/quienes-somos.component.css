@@ -1,7 +1,13 @@
 /* Sección 1: ¿Quiénes somos? */
 .quienes-somos {
   text-align: center;
-  background: linear-gradient(90deg, rgba(254, 94, 6, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(5, 72, 99, 1) 0%, /* #054863 */
+    rgba(122, 184, 191, 1) 36%, /* #7AB8BF */
+    rgba(223, 160, 118, 1) 68%, /* #DFA076 */
+    rgba(242, 92, 5, 1) 100% /* #F25C05 */
+  );
   color: white;
   padding: 4rem 2rem;
 }
@@ -100,19 +106,25 @@
 }
 
 .team-card:hover .overlay {
-  opacity: 1; /* Muestra el overlay al hacer hover */
+  opacity: 0.9; /* Muestra el overlay al hacer hover */
 }
 
 .overlay h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #012E40; /* Ajuste de color */
+  color: #FFFF; /* Ajuste de color */
 }
 
 .overlay p {
   font-size: 0.9rem;
   margin-top: 0.5rem;
-  color: #012E40; /* Ajuste de color */
+  color: #FFFF; /* Ajuste de color */
+}
+/* Línea separadora */
+.separator {
+  margin: 2rem auto; /* Espaciado superior e inferior centrado */
+  width: 60%; /* Ocupa el 60% del ancho */
+  border-top: 3px solid #012E40; /* Línea semi gruesa y del color de la sección */
 }
 
 /* Responsividad: Pantallas medianas */

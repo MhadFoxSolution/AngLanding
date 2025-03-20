@@ -19,7 +19,7 @@ export class HomeComponent {
     },
     { 
       image: 'images/ImgDevMobile.jpg',
-      titulo: 'Desarrollo mobile',
+      titulo: 'Desarrollo movil',
       intro: 'Lleva tu negocio a donde vayan tus usuarios con nuestras aplicaciones móviles personalizadas.',
       body: 'Diseñamos aplicaciones intuitivas y funcionales que conectan directamente con tu audiencia. Nos enfocamos en ofrecer experiencias móviles fluidas, ya sea para Android, iOS u otras tecnologías emergentes. Empezar de forma independiente nos permite cuidar cada detalle y garantizar la innovación en cada proyecto.'
     },
