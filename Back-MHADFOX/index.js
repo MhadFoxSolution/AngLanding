@@ -2,14 +2,18 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { request } = require('http');
+require('dotenv').config(); // Cargar variables de entorno desde .env
 
-app.use(cors())
+app.use(cors()); // Habilitar CORS
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extends:false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
+// Rutas principales
 app.use(require('./routes/correoRouter'));
 
-app.listen(3000, () => {
-console.log('Servidor corriendo')
+// Puerto dinámico para producción
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
