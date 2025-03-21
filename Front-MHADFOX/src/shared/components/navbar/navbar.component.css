@@ -3,6 +3,10 @@ mat-toolbar {
   background-color: #FFFFFF; /* Fondo principal */
   color: #012E40; /* Color del texto */
   z-index: 1000; /* Asegura que el navbar esté encima */
+  position: fixed; /* Fija el navbar */
+  top: 0; /* Lo coloca en la parte superior */
+  left: 0; /* Asegura que se alinee al borde izquierdo */
+  width: 100%; /* Hace que el navbar ocupe todo el ancho de la pantalla */
 }
 
 .toolbar-content {

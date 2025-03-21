@@ -33,8 +33,8 @@
     background: linear-gradient(
         145deg,
         rgba(5, 72, 99, 1) 0%, /* #054863 */
-        rgba(122, 184, 191, 1) 30%, /* #7AB8BF */
-        rgba(223, 160, 118, 1) 60%, /* #DFA076 */
+        rgba(122, 184, 191, 1) 32%, /* #7AB8BF */
+        rgba(223, 160, 118, 1) 64%, /* #DFA076 */
         rgba(242, 92, 5, 1) 100% /* #F25C05 */
       ); /* Cambia el degradado al pasar el mouse */
   }
