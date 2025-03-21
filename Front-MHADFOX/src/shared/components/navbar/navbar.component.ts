@@ -20,12 +20,23 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class NavbarComponent {
   isMenuOpen = false; // Estado del menú hamburguesa
+  animationRunning = false; // Estado de la animación
 
   toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen; // Alterna entre abierto y cerrado
+    this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      this.animationRunning = true; // Activa animación de apertura
+    }
   }
 
   closeMenu(): void {
-    this.isMenuOpen = false;
+    this.isMenuOpen = false; // Activa animación de cierre
+    this.animationRunning = true; // Asegura que el menú no desaparezca instantáneamente
+  }
+
+  onAnimationEnd(): void {
+    if (!this.isMenuOpen) {
+      this.animationRunning = false; // Finaliza la animación al cerrar el menú
+    }
   }
 }

@@ -61,6 +61,7 @@ mat-toolbar {
   flex-direction: column; /* Botones en columna */
   gap: 1rem;
   box-sizing: border-box; /* Asegura que no se desborde */
+  animation-duration: 0.5s; /* Ajusta la duración de la animación */
 }
 
 /* Estilo para botones dentro del menú desplegable */

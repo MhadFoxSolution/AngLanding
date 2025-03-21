@@ -1,4 +1,13 @@
-<button class="scroll-to-top" (click)="scrollToTop()" *ngIf="isVisible">
-    <mat-icon>arrow_drop_up</mat-icon>
+<button
+  *ngIf="animationRunning || isVisible"
+  class="scroll-to-top"
+  (click)="scrollToTop()"
+  [ngClass]="{
+    'animate__animated': true,
+    'animate__fadeInUp': isVisible,
+    'animate__fadeOutDown': !isVisible
+  }"
+  (animationend)="onAnimationEnd()"
+>
+  <mat-icon>arrow_drop_up</mat-icon>
 </button>
-  

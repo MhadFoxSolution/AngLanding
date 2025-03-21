@@ -19,9 +19,18 @@
   </div>
 
   <!-- Menú desplegable para pantallas pequeñas -->
-  <div class="mobile-menu" *ngIf="isMenuOpen">
-    <button mat-button routerLink="/home" class="button-secundary" (click)="isMenuOpen = false">Inicio</button>
-    <button mat-button routerLink="/quienes-somos" class="button-secundary" (click)="isMenuOpen = false">¿Quiénes somos?</button>
-    <button mat-button routerLink="/contacto" class="custom-button" (click)="isMenuOpen = false">Contáctanos</button>
-  </div>  
+  <div
+    *ngIf="animationRunning || isMenuOpen"
+    class="mobile-menu"
+    [ngClass]="{
+      'animate__animated': true,
+      'animate__slideInDown': isMenuOpen,
+      'animate__slideOutUp': !isMenuOpen
+    }"
+    (animationend)="onAnimationEnd()"
+  >
+    <button mat-button routerLink="/home" class="button-secundary" (click)="closeMenu()">Inicio</button>
+    <button mat-button routerLink="/quienes-somos" class="button-secundary" (click)="closeMenu()">¿Quiénes somos?</button>
+    <button mat-button routerLink="/contacto" class="custom-button" (click)="closeMenu()">Contáctanos</button>
+  </div>
 </mat-toolbar>
