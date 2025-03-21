@@ -1,7 +1,223 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import url("../node_modules/@angular/material/prebuilt-themes/azure-blue.css");
 
-html, body { height: 100%; }
+html, body { 
+  height: 100%; 
+}
+
 * {
   font-family: 'Nunito', sans-serif;
+}
+
+/* Tema oscuro - Estilos globales */
+body.dark-theme {
+  background-color: #121212; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+}
+
+/* NAVBAR */
+
+/* Navbar - Fondo y color de texto */
+body.dark-theme mat-toolbar {
+  background-color: #1f1f1f; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+}
+
+/* Botones secundarios - Cambiar solo el color de la letra */
+body.dark-theme .button-secundary {
+  color: #f0f0f0 !important; /* Texto claro */
+}
+
+/* Logo - Cambiar el color del texto */
+body.dark-theme .logo-button {
+  color: #f0f0f0 !important; /* Texto claro */
+}
+
+/* Menú desplegable - Fondo y texto */
+body.dark-theme .mobile-menu {
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: #ffffff; /* Texto claro */
+}
+
+body.dark-theme .mobile-menu button {
+  background-color: transparent; /* Fondo transparente para coherencia */
+  color: #f0f0f0 !important; /* Texto claro */
+}
+
+body.dark-theme .mobile-menu button:hover {
+  background-color: #444444; /* Fondo ligeramente más claro al pasar el mouse */
+  transform: scale(1.05); /* Efecto hover */
+}
+
+/* Exclusión de estilos para .custom-button */
+.custom-button {
+  background-color: #F24405 !important; /* Mantiene el fondo rojo */
+  color: #FFFFFF !important; /* Mantiene el texto blanco */
+}
+
+/* Burger menu - Ajustar icono en tema oscuro */
+body.dark-theme .menu-button mat-icon {
+  color: #ffffff !important; /* Icono blanco en tema oscuro */
+}
+
+/* FOOTER */
+
+/* Estilos del footer en el tema oscuro */
+body.dark-theme .footer {
+  background-color: #1f1f1f; /* Fondo oscuro del footer */
+  color: #ffffff; /* Texto claro */
+}
+
+body.dark-theme .footer-links a {
+  color: #bbbbbb !important; /* Color claro para links en el tema oscuro */
+}
+
+body.dark-theme .footer-links a:hover {
+  text-decoration: underline;
+  color: #ffffff; /* Color blanco al pasar el mouse */
+}
+
+body.dark-theme .footer-text {
+  color: #cfcfcf; /* Texto ligeramente claro */
+}
+
+/* HOME */
+
+body.dark-theme .hero-text {
+  color: #012E40 !important; /* Color específico para el texto */
+}
+
+/* Tema oscuro - Sección Servicios */
+body.dark-theme .services-container {
+  background-color: #1f1f1f !important; /* Fondo oscuro */
+  color: #ffffff ; /* Texto blanco */
+}
+
+body.dark-theme .services-container h2 {
+  color: #ffffff !important; /* Encabezado en blanco */
+}
+
+body.dark-theme .service-card { 
+  background-color: #2b2b2b ;/* Fondo oscuro para las tarjetas */
+  color: #ffffff !important; /* Texto blanco */
+}
+
+body.dark-theme .service-card h3 {
+  color: #ffffff !important; /* Títulos de las tarjetas en blanco */
+}
+
+body.dark-theme .service-card p {
+  color: #d3d3d3 !important; /* Texto ligeramente claro */
+  font-weight: bold;
+}
+
+/* QUIENES SOMOS */
+
+/* Tema oscuro - Sección 1: ¿Quiénes somos? */
+body.dark-theme .quienes-somos {
+  color: #012E40 !important; 
+  font-weight: bold;/* Cambia solo el color del texto */
+}
+
+/* Tema oscuro - Sección 2: Nuestros valores */
+body.dark-theme .nuestros-valores {
+  background-color: #1f1f1f; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+body.dark-theme .nuestros-valores h3,
+body.dark-theme .nuestros-valores p,
+body.dark-theme .values-grid .value {
+  color: #ffffff; /* Asegura que todos los textos sean blancos */
+}
+
+/* Tema oscuro - Sección 3: Nuestro equipo */
+body.dark-theme .nuestro-equipo {
+  background-color: #1f1f1f; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+body.dark-theme .team-card {
+  background-color: #2b2b2b; /* Fondo oscuro de las tarjetas */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Tema oscuro - Línea separadora */
+body.dark-theme .separator {
+  border-top: 3px solid #ffffff !important; /* Cambia el color de la línea separadora */
+}
+
+/* CONTACTANOS */
+
+/* Tema oscuro - Sección Hero */
+body.dark-theme .hero {
+  background-color: #121212; /* Fondo oscuro */
+}
+
+body.dark-theme .hero::before {
+  opacity: 0.3; /* Marca de agua más visible en el tema oscuro */
+}
+
+body.dark-theme .container {
+  color: #ffffff; /* Todo el texto en blanco */
+}
+
+body.dark-theme .title {
+  color: #ffffff; /* Texto blanco para títulos */
+}
+
+body.dark-theme .highlight {
+  color: #F25C05; /* Mantiene el color original */
+}
+
+body.dark-theme .description {
+  color: #ffffff; /* Texto blanco en descripción */
+}
+
+/* Contacto - Detalles */
+body.dark-theme .contact-details {
+  color: #ffffff; /* Texto blanco en detalles */
+}
+
+body.dark-theme .contact-item {
+  color: #ffffff; /* Texto blanco para elementos de contacto */
+}
+
+body.dark-theme .icon {
+  color: #ffffff; /* Iconos blancos para tema oscuro */
+}
+
+/* Contacto - Formulario */
+body.dark-theme .contact-form {
+  color: #ffffff; /* Texto blanco dentro del formulario */
+}
+
+body.dark-theme .send-button {
+  background-color: #f25c05 !important; /* Mantiene el botón sin cambios */
+  color: white !important; /* Mantiene el texto del botón sin cambios */
+}
+
+/* Tema oscuro - Formulario */
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+  color: #ffffff !important; /* Texto blanco al escribir */
+  background-color: #2b2b2b; /* Fondo oscuro para los campos */
+  border: 1px solid #444444; /* Bordes para mayor contraste */
+}
+
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+  color: #aaaaaa !important; /* Texto del placeholder en gris claro */
+}
+
+/* THEME DARK BTN */
+
+/* Tema oscuro - Botón de cambio de tema */
+body.dark-theme .theme-toggle-button {
+  background-color: #D8D9D7; /* Fondo claro para el botón */
+  color: #1f1f1f; /* Color del icono en tema oscuro */
+}
+
+body.dark-theme .theme-toggle-button mat-icon {
+  content: 'light_mode'; /* Cambia el icono a tema claro */
 }

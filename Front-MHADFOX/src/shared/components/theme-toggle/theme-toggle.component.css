@@ -1,0 +1,58 @@
+/* Contenedor principal */
+.theme-toggle-container {
+  position: fixed;
+  bottom: 150px; /* Ajusta para que quede arriba del botón de scroll */
+  right: 20px; /* Margen desde el borde derecho */
+  z-index: 2000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Botón flotante */
+.theme-toggle-button {
+  position: relative;
+  background: #3b3b3b; /* Gris Oxford */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%; /* Botón circular */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.2),
+              5px 5px 10px rgba(0, 0, 0, 0.4); /* Efecto 3D */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover para botón flotante */
+.theme-toggle-button:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: inset -5px -5px 8px rgba(0, 0, 0, 0.2),
+              8px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Texto visible al hacer hover */
+.toggle-text {
+  position: absolute;
+  bottom: -30px; /* Ajusta posición del texto debajo del botón */
+  background: #3b3b3b;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.theme-toggle-button:hover .toggle-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tema oscuro */
+body.dark-theme .theme-toggle-button {
+  background: #D8D9D7; /* Fondo claro para el botón */
+  color: #1f1f1f; /* Texto/icono oscuro */
+}

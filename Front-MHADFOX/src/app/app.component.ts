@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 import { FooterComponent } from '../shared/components/footer/footer.component';
 import { ScrollToTopComponent } from '../shared/components/scroll-to-top/scroll-to-top.component';
+import { ThemeToggleComponent } from '../shared/components/theme-toggle/theme-toggle.component';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import { ScrollToTopComponent } from '../shared/components/scroll-to-top/scroll-
     RouterModule, 
     NavbarComponent,
     FooterComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    ThemeToggleComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
