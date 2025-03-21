@@ -1,0 +1,50 @@
+/* Sección principal: Botón scroll-to-top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(
+        145deg,
+        rgba(5, 72, 99, 1) 0%, /* #054863 */
+        rgba(122, 184, 191, 1) 36%, /* #7AB8BF */
+        rgba(223, 160, 118, 1) 68%, /* #DFA076 */
+        rgba(242, 92, 5, 1) 100% /* #F25C05 */
+      ); /* Nuevo degradado stacked linear */
+    filter: saturate(3) brightness(1.2);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Mantiene el botón circular */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
+    font-size: 28px;
+    box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.2), 
+                5px 5px 10px rgba(0, 0, 0, 0.4); /* Efecto de luz y sombra para la esfera */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: inset -5px -5px 8px rgba(0, 0, 0, 0.2), 
+                8px 8px 15px rgba(0, 0, 0, 0.5); /* Intensifica el efecto 3D */
+    background: linear-gradient(
+        145deg,
+        rgba(5, 72, 99, 1) 0%, /* #054863 */
+        rgba(122, 184, 191, 1) 30%, /* #7AB8BF */
+        rgba(223, 160, 118, 1) 60%, /* #DFA076 */
+        rgba(242, 92, 5, 1) 100% /* #F25C05 */
+      ); /* Cambia el degradado al pasar el mouse */
+  }
+  
+  /* Icono Material dentro del botón */
+  .mat-icon {
+    font-size: 32px; /* Tamaño del icono */
+    line-height: 1; /* Evita desbordamientos o espacios extra */
+    display: inline-flex; /* Mantiene el comportamiento del icono consistente */
+    align-items: center;
+    justify-content: center;
+  }
+  
