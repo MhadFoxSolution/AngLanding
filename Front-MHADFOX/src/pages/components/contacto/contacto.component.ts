@@ -42,7 +42,7 @@ export class ContactoComponent {
       mensaje:"Correo de contacto: "+this.datos.value.email+"\n Mensaje del cliente: "+ this.datos.value.mensaje 
     }
   console.log(params)
-  this.httpClient.post('http://localhost:3000/envio',params).subscribe(resp=>{
+  this.httpClient.post('https://mhadfoxsolution.com/envio',params).subscribe(resp=>{
   console.log(resp)
   Notiflix.Loading.remove();
   Notiflix.Notify.success('Correo enviado correctamente',{success: {
