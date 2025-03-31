@@ -24,12 +24,12 @@ export default {
 ],
   entryPointToBrowserMapping: undefined,
   assets: {
-    'index.csr.html': {size: 55639, hash: '06586139ff973b57dd190d303c9987a859d1c5eeecfd5686956b9a90435da2fb', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
-    'index.server.html': {size: 17155, hash: 'cc49e7eb2330341feac71a7cd0046d9a3e29d1ca69f282089d9b9703d9e0f016', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
-    'index.html': {size: 102725, hash: '238c65cb30e82be5151aade5a57b94095dbaa51efec123ae8a78e99802986343', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
-    'home/index.html': {size: 102725, hash: '238c65cb30e82be5151aade5a57b94095dbaa51efec123ae8a78e99802986343', text: () => import('./assets-chunks/home_index_html.mjs').then(m => m.default)},
-    'contacto/index.html': {size: 140138, hash: 'f91cbab09db0abdbfaead46fcab203052f8c89734380b1f32863ea61d105536f', text: () => import('./assets-chunks/contacto_index_html.mjs').then(m => m.default)},
-    'quienes-somos/index.html': {size: 114411, hash: '58e054d430df3394c3be63903a06765c6e65caeafe485d18fabf284c07586c42', text: () => import('./assets-chunks/quienes-somos_index_html.mjs').then(m => m.default)},
+    'index.csr.html': {size: 55639, hash: 'ec9ee91a13bc5edbc6f50c30ea061cf99fa6e813e013eb914265ff1f2447589a', text: () => import('./assets-chunks/index_csr_html.mjs').then(m => m.default)},
+    'index.server.html': {size: 17155, hash: '10df80c224bead89f50fec8a5b58768d7d6d9f13a51bbb4c1cfcc6ec660d1997', text: () => import('./assets-chunks/index_server_html.mjs').then(m => m.default)},
+    'home/index.html': {size: 102725, hash: 'f8034bf7034b629d3d91f7cf1717f960c067c349774b810c8a32c6534c4dff04', text: () => import('./assets-chunks/home_index_html.mjs').then(m => m.default)},
+    'index.html': {size: 102725, hash: 'f8034bf7034b629d3d91f7cf1717f960c067c349774b810c8a32c6534c4dff04', text: () => import('./assets-chunks/index_html.mjs').then(m => m.default)},
+    'quienes-somos/index.html': {size: 114411, hash: 'dfca285f47fe9337136a554f3cbbcf3995b563433bb1eb22e36df5d0f69b5ca5', text: () => import('./assets-chunks/quienes-somos_index_html.mjs').then(m => m.default)},
+    'contacto/index.html': {size: 140138, hash: '0578a8df0417501c69345b01781849ab6af254d994429340107c95d15ff8f44a', text: () => import('./assets-chunks/contacto_index_html.mjs').then(m => m.default)},
     'styles-64GLBTEE.css': {size: 88041, hash: 'xkbt1z79ob8', text: () => import('./assets-chunks/styles-64GLBTEE_css.mjs').then(m => m.default)}
   },
 };
