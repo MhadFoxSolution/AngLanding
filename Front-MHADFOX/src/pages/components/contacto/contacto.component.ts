@@ -31,8 +31,9 @@ export class ContactoComponent {
   constructor() {
     this.datos = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
-      asunto: new FormControl('', Validators.required),
-      mensaje: new FormControl('', Validators.required)
+      asunto: new FormControl('', Validators.required,  ),
+      mensaje: new FormControl('', Validators.required),
+      nombre: new FormControl('', Validators.required)
     });
   }
 
@@ -47,7 +48,7 @@ export class ContactoComponent {
 
     // Configurar parámetros para EmailJS
     const formData = {
-      nombre: 'Cliente',
+      nombre: this.datos.value.nombre,
       email: this.datos.value.email,
       asunto: this.datos.value.asunto,
       mensaje: this.datos.value.mensaje
